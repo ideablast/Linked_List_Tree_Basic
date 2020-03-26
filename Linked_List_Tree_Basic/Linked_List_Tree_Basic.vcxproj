@@ -18,6 +18,16 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ALL.h" />
+    <ClInclude Include="Data.h" />
+    <ClInclude Include="FUNC.h" />
+    <ClInclude Include="LIB.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="tree_func.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C8579061-B0F0-4EA7-8612-33225825158E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -141,16 +151,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="ALL.h" />
-    <ClInclude Include="Data.h" />
-    <ClInclude Include="FUNC.h" />
-    <ClInclude Include="LIB.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.c" />
-    <ClCompile Include="tree_func.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

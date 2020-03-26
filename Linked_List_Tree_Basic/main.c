@@ -2,98 +2,175 @@
 
 int main()
 {
-	Node *top = Add_new_node();
-	int *level_order;
-	int depth = 1;
-	int depth_max = 1;
-	
-	Create_node(top, 60);
-	Create_node(top, 30);
-	Create_node(top, 32);
-	Create_node(top, 80);
-	Create_node(top, 20);
-	Create_node(top, 40);
-	Create_node(top, 70);
-	Create_node(top, 90);
-	Create_node(top, 10);
-	Create_node(top, 25);
-	Create_node(top, 35);
-	Create_node(top, 45);
-	Create_node(top, 65);
-	Create_node(top, 75);
-	Create_node(top, 85);
-	Create_node(top, 95);
-	Create_node(top, 23);
-	Create_node(top, 27);
-	Create_node(top, 21);
-	Create_node(top, 22);
-	Create_node(top, 24);
-	Create_node(top, 26);
-	Create_node(top, 28);
-	Create_node(top, 29);
-	Create_node(top, 31);
-	
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 60);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 30);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 32);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 80);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 20);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 40);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 70);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 90);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 10);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 25);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 35);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 45);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 65);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 75);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 85);
-	Print_level_order(top); puts("");
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 95);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 23);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 27);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 21);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 22);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 24);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 26);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 28);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 29);
-	Print_level_order(top); puts("");
-	Delete_node_search(top,top, 31);
-	Print_level_order(top); puts("");
+	Node *top = Add_new_node(0);
+	int insert;
 
-	Print_pre_order(top); puts("");
-	Print_in_order(top); puts("");
-	Print_post_order(top); puts("");	
-	Print_level_order(top); puts("");
+	while (1)
+	{
+		scanf("%d", &insert);
+		if (insert == -1)
+			break;
+		Create_node(top, insert);
+		Level_order(top);
+
+	}
+	while (1)
+	{
+		scanf("%d", &insert);
+		if (insert == -1)
+			break;
+		Delete_tree(top, insert);
+		Level_order(top);
+
+	}
+	while (1)
+	{
+		scanf("%d", &insert);
+		if (insert == -1)
+			break;
+		Create_node(top, insert);
+		Level_order(top);
+	}
 
 }
 
 #ifdef EXAMPLE
+
+
+while (1)
+{
+	scanf("%d", &insert);
+	if (insert == -1)
+		break;
+	Create_node(top, insert);
+	Level_order(top);
+
+}
+while (1)
+{
+	scanf("%d", &insert);
+	if (insert == -1)
+		break;
+	Delete_tree(top, insert);
+	Level_order(top);
+
+}
+while (1)
+{
+	scanf("%d", &insert);
+	if (insert == -1)
+		break;
+	Create_node(top, insert);
+	Level_order(top);
+}
+
+Create_node(top, 60);
+
+Create_node(top, 30);
+Create_node(top, 80);
+
+Create_node(top, 20);
+Create_node(top, 32);
+Create_node(top, 70);
+Create_node(top, 90);
+
+
+Create_node(top, 10);
+Create_node(top, 25);
+Create_node(top, 31);
+Create_node(top, 40);
+Create_node(top, 65);
+Create_node(top, 75);
+Create_node(top, 85);
+Create_node(top, 95);
+
+Create_node(top, 23);
+Create_node(top, 27);
+Create_node(top, 35);
+Create_node(top, 45);
+
+Create_node(top, 21);
+Create_node(top, 24);
+Create_node(top, 26);
+Create_node(top, 28);
+
+Create_node(top, 22);
+Create_node(top, 29);
+
+Delete_tree(top, 60);
+Level_order(top);
+Delete_tree(top, 65);
+Level_order(top);
+
+Print_pre_order(top); puts("");
+Print_in_order(top); puts("");
+Print_post_order(top); puts("");
+Print_level_order(top); puts("");
+
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 60);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 30);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 32);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 80);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 20);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 40);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 70);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 90);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 10);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 25);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 35);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 45);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 65);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 75);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 85);
+Print_level_order(top); puts("");
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 95);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 23);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 27);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 21);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 22);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 24);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 26);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 28);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 29);
+Print_level_order(top); puts("");
+Delete_node_search(top, top, 31);
+Print_level_order(top); puts("");
+
+Create_node(top, 60);
+Create_node(top, 30);
+Create_node(top, 80);
+Create_node(top, 20);
+Create_node(top, 32);
+Create_node(top, 70);
+Create_node(top, 90);
+Create_node(top, 95);
+Create_node(top, 85);
+Create_node(top, 84);
+Create_node(top, 87);
 
 Create_node(top, 60);
 Create_node(top, 30);
@@ -116,29 +193,31 @@ Create_node(top, 74);
 
 Create_node(top, 60);
 Create_node(top, 30);
-Create_node(top, 32);
 Create_node(top, 80);
 Create_node(top, 20);
-Create_node(top, 40);
+Create_node(top, 32);
 Create_node(top, 70);
 Create_node(top, 90);
 Create_node(top, 10);
 Create_node(top, 25);
-Create_node(top, 35);
-Create_node(top, 45);
+Create_node(top, 31);
+Create_node(top, 40);
 Create_node(top, 65);
 Create_node(top, 75);
 Create_node(top, 85);
 Create_node(top, 95);
 Create_node(top, 23);
 Create_node(top, 27);
+Create_node(top, 35);
+Create_node(top, 45);
+
 Create_node(top, 21);
-Create_node(top, 22);
 Create_node(top, 24);
 Create_node(top, 26);
 Create_node(top, 28);
+Create_node(top, 22);
 Create_node(top, 29);
-Create_node(top, 31);
+
 
 Create_node(top, 60);
 Create_node(top, 30);

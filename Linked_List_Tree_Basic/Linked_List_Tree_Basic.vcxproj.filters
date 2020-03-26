@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LIB.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="ALL.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -27,12 +24,15 @@
     <ClInclude Include="FUNC.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="LIB.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="tree_func.c">
+    <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
+    <ClCompile Include="tree_func.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

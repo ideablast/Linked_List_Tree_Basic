@@ -11,6 +11,11 @@ typedef struct _Node {
 
 #endif
 
+
+#define LEFT 100
+#define RIGHT 200
+#define END 300
+
 #define TRUE 1
 #define FALSE 0
 #define FAIL -1
